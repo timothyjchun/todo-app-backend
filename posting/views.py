@@ -7,5 +7,3 @@ todo_bp = Blueprint('post',__name__)
 api = Api(todo_bp)
 
 api.add_resource(Todo,'/send')
-
-
