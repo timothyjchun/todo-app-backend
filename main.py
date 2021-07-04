@@ -24,9 +24,6 @@ class Test_Board(db.Model):
     context = db.Column(db.String(50),nullable = False)
 
 
-
-
-
 from posting.views import *
 app.register_blueprint(todo_bp, url_prefix = "/post")
 
