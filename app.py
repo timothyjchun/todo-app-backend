@@ -1,20 +1,11 @@
 from flask import Flask, request
 from flask_restful import Resource, reqparse, Api
 
-
-
 app = Flask(__name__)
+HOME_PAGE = "https://got-todo-app.herokuapp.com"
 
-api = Api(app)
-
-class Todo(Resource):
-    def get(self):
-        pass
-
-    def post(self):
-        print(request.data)
-
-api.add_resource(Todo,'/send')
+from posting.views import *
+app.register_blueprint(todo_bp, url_prefix = f"{HOME_PAGE}/post")
 
 
 if __name__ == '__main__':
