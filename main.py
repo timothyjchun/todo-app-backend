@@ -5,7 +5,7 @@ from flask_sqlalchemy import SQLAlchemy
 app = Flask(__name__)
 
 pg_db_username = 'timothychun'
-pg_db_password = ''
+pg_db_password = 'mypetcookie0122'
 pg_db_name = 'todo_app'
 pg_db_hostname = 'localhost'
 
