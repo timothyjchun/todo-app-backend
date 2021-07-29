@@ -1,6 +1,7 @@
 from flask import request
 from flask_restful import Resource
 from db import *
+import json
 
 class Todo(Resource):
     def get(self):
@@ -11,7 +12,7 @@ class Todo(Resource):
     #for a POST request, get the new data and save it to the database
     def post(self):
         text = Test_Board(
-            context = request.data.decode("utf-8")
+            context = json.loads(request.data)['text']
         )
         print(text)
         db.session.add(text)
