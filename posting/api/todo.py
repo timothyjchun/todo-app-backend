@@ -4,7 +4,9 @@ from db import *
 
 class Todo(Resource):
     def get(self):
-        pass
+        todo = db.session.query().with_entities(Test_Board.context).all()
+        print(todo)
+        return todo
 
     def post(self):
         text = Test_Board(
