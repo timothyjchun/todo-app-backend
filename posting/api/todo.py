@@ -11,11 +11,12 @@ class Todo(Resource):
         
     #for a POST request, get the new data and save it to the database
     def post(self):
-        text = Test_Board(
-            context = json.loads(request.data)['text']
-        )
-        print(text)
-        db.session.add(text)
-        db.session.commit()
+        print(type(json.loads(request.data)['text']))
+        # text = Test_Board(
+        #     context = json.loads(request.data)['text']
+        # )
+        # print(text)
+        # db.session.add(text)
+        # db.session.commit()
         
         
