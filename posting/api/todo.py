@@ -19,7 +19,8 @@ class Todo(Resource):
         data = TodoSchema().load(json.loads(request.data))
         print(type(data))
         text = Test_Board(
-            context = data['context']
+            context = data['context'],
+            color_option = data['option']
         )
         print(f"text:{text}")
         db.session.add(text)
