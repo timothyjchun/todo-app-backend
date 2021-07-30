@@ -7,7 +7,8 @@ import json
 class Todo(Resource):
     def get(self):
         schema = TodoSchema(many = True)
-        todo = db.session.query(Test_Board).all()
+        # todo = db.session.query(Test_Board).all()
+        todo = db.session.query().with_entities(Test_Board.context).all()
         print(todo)
         result = schema.dump(todo)
         print(result)
