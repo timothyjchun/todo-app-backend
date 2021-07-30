@@ -1,2 +1,3 @@
 # todo-app-backend
-Flask Api for pratice todo-app
+
+Flask Api for practice todo-app
