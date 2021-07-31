@@ -20,7 +20,7 @@ class Todo(Resource):
         print(type(data))
         text = Test_Board(
             context = data['context'],
-            color_option = data['option']
+            color_option = data['color_option']
         )
         print(f"text:{text}")
         db.session.add(text)
