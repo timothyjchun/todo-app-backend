@@ -13,7 +13,7 @@ class Todo(Resource):
         print(todo)
         result = schema.dump(todo)
         print(result)
-        return dict(result = result, id=id)
+        return jsonify(dict(result = result, id=id))
         
     #for a POST request, get the new data and save it to the database
     def post(self):
