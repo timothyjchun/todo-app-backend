@@ -8,11 +8,12 @@ class Todo(Resource):
     def get(self):
         schema = TodoSchema(many = True)
         todo = db.session.query(Test_Board).all()
+        id = db.session.query().with_entities(Test_Board.id).all()
         # todo = db.session.query().with_entities(Test_Board.context).all()
         print(todo)
         result = schema.dump(todo)
         print(result)
-        return result
+        return dict(result = result, id=id)
         
     #for a POST request, get the new data and save it to the database
     def post(self):
